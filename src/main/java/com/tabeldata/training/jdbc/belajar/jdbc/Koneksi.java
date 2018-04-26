@@ -12,9 +12,9 @@ import java.sql.Timestamp;
 public class Koneksi {
 
     //    format jdbc url yaitu jdbc:sqlserver://LOKASI_DATABASE:PORT_DATABASE;databaseName=NAMA_DATABASE
-    private static final String URL = "jdbc:sqlserver://192.168.100.50:1433;databaseName=JDBC_ABDUL;instanceName=SQLEXPRESS2017";
+    private static final String URL = "jdbc:sqlserver://localhost;databaseName=JDBC_ABDUL;instanceName=SQLEXPRESS2017";
     private static final String username = "sa";
-    private static final String password = "PasswordnyaSA2018";
+    private static final String password = "16agustus1994";
 
     public static void main(String[] args) throws SQLException {
 
@@ -27,6 +27,8 @@ public class Koneksi {
             sqle.printStackTrace();
         }
        
+        Connection koneksi = DriverManager.getConnection(URL, username, password);
+        
         /*
 //***********************************************************************************************************************
 //CARA BACA DATA DARI TABEL SQL
@@ -84,6 +86,7 @@ public class Koneksi {
         koneksi.close();
         */
         
+        /*
 //***********************************************************************************************************************
 //CARA INSERT DATA KE TABEL
 //***********************************************************************************************************************
@@ -99,6 +102,6 @@ public class Koneksi {
         perintah.executeUpdate();
         perintah.close();
         koneksi.close();
-        
+        */
     }
 }
