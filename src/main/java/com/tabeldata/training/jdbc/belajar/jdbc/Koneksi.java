@@ -26,7 +26,7 @@ public class Koneksi {
             // handling ketika terjadi error koneksi ke database
             sqle.printStackTrace();
         }
-       
+        //CARA MENGAMBIL DATA DARI TABEL SQL
         Connection koneksi = DriverManager.getConnection(URL, username, password);
         
         /*
@@ -66,8 +66,7 @@ public class Koneksi {
 //***********************************************************************************************************************
 //CARA INSERT DATA KE TABEL
 //***********************************************************************************************************************
-        //CARA MENGAMBIL DATA DARI TABEL SQL
-        Connection koneksi = DriverManager.getConnection(URL, username, password);
+        
         //(BACA DATA DENGAN CARA PREPAREDSTATEMENT)MENGAMBIL PERINTAH PADA KONEKSI
         PreparedStatement perintah = koneksi.prepareStatement("INSERT INTO BUKU (Judul_Buku, Nama_Pengarang, Penerbit_ID, "
                 + "Tahun_Terbit, Tanggal_Publish, ISBN, Tersedia, Created_Date, Last_Update_Date, Created_By, Updated_By)\n"
@@ -86,12 +85,10 @@ public class Koneksi {
         koneksi.close();
         */
         
-        /*
+       
 //***********************************************************************************************************************
 //CARA INSERT DATA KE TABEL
 //***********************************************************************************************************************
-        //CARA MENGAMBIL DATA DARI TABEL SQL
-        Connection koneksi = DriverManager.getConnection(URL, username, password);
         //(BACA DATA DENGAN CARA PREPAREDSTATEMENT)MENGAMBIL PERINTAH PADA KONEKSI
         PreparedStatement perintah = koneksi.prepareStatement("UPDATE BUKU\n" 
                 + " SET Nama_Pengarang = ?, Last_Update_Date = sysdatetime(), Updated_By = ?\n" 
@@ -102,6 +99,6 @@ public class Koneksi {
         perintah.executeUpdate();
         perintah.close();
         koneksi.close();
-        */
+       
     }
 }

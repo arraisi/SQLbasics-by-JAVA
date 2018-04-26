@@ -21,4 +21,4 @@ WHERE
 DELETE FROM 
 	BUKU 
 WHERE 
-	ID = 1
+	ID = 4
